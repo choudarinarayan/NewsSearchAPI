@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.obj-width {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem; 
+
+}
+
+
+nav {
+    background-color: #2d4c59;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+}
+
+.navbar .logo {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+}
+
+#search-input {
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #138065;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#blog-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Dynamic columns */
+    gap: 20px; /* Space between grid items */
+    padding: 2rem 0;
+}
+
+.blog-card {
+    background-color: #fff;
+    border: 1px solid #2d4c50;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure image fits the container */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+    color: #141414;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsive Design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    #blog-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .navbar .logo {
+        font-size: 1.8rem;
+    }
+
+    #search-input {
+        width: 150px;
+        padding: 10px 10px;
+    }
+
+
+    .blog-card img {
+        height: 150px; /* Reduce image height on small screens */
+    }
+}
